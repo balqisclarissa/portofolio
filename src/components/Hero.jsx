@@ -90,12 +90,36 @@ function Hero() {
         </div>
       </motion.div>
 
-      <div className="hero-orbit">
-        <div className="orbit-ring orbit-one" />
-        <div className="orbit-ring orbit-two" />
-        <div className="orbit-core">BC</div>
-        <div className="orbit-dot" />
-      </div>
+      <motion.div
+        className="hero-visual"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="hero-portrait">
+
+          <div className="portrait-glow" />
+
+          <div className="portrait-ring" />
+
+          <div className="portrait-blob">
+            <img
+              src="/photo.png"
+              alt="Profile"
+              className="portrait-image"
+            />
+          </div>
+
+          <div className="portrait-orbit orbit-a" />
+          <div className="portrait-orbit orbit-b" />
+
+          <div className="portrait-label">
+            <Code2 size={16} />
+            <span>INFORMATICS</span>
+          </div>
+
+        </div>
+      </motion.div>
 
       <a href="#about" className="scroll-indicator">
         <ArrowDown size={17} />

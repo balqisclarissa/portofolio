@@ -38,7 +38,7 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-   title: "Cryptocurrency Patterned Dataset Mining",
+    title: "Cryptocurrency Patterned Dataset Mining",
     category: "Data Mining",
     icon: "◈",
     color: "pink",
