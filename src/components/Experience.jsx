@@ -8,7 +8,7 @@ function Experience() {
 
       <SectionHeading
         label="MY JOURNEY"
-        title="Experience & Education."
+        title="Organization Experience & Education."
       />
 
       <div className="timeline">

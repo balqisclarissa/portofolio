@@ -170,6 +170,17 @@ function Projects() {
                 </a>
               )}
 
+              {selected.prototype && (
+                <a
+                  className="button primary"
+                  href={selected.prototype}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Code2 size={17} />
+                  Prototype
+                </a>
+              )}
             </motion.div>
           </motion.div>
         )}

@@ -1,4 +1,3 @@
-
 import {
   Globe,
   Terminal,
@@ -11,103 +10,71 @@ import {
   Code2
 } from "lucide-react";
 
+import { SiHtml5, SiCss, SiReact } from "react-icons/si";
+
 export const profile = {
   name: "Balqis Rahma Clarissa",
   role: "Informatics Student",
-  tagline:
-    "Exploring technology, building creative ideas, and transforming them into meaningful digital experiences.",
-  email: "your.email@example.com",
-  github: "https://github.com/",
-  linkedin: "https://linkedin.com/",
+  tagline: "I’m still learning, exploring, and figuring things out through technology and the projects I create.",
+  email: "balqisrahmaclarissa@gmail.com",
+  github: "https://github.com/balqisclarissa",
+  linkedin: "www.linkedin.com/in/balqis-rahma-clarissa",
   cv: "/cv.pdf"
 };
 
 export const skills = [
-  {
-    title: "Frontend Development",
-    icon: Globe,
-    items: ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap"]
-  },
-  {
-    title: "Programming",
-    icon: Terminal,
-    items: ["Python", "PHP", "JavaScript"]
-  },
-  {
-    title: "Machine Learning",
-    icon: BrainCircuit,
-    items: ["TensorFlow", "Scikit-learn", "CNN", "Random Forest"]
-  },
-  {
-    title: "Database",
-    icon: Database,
-    items: ["SQL", "MySQL"]
-  },
-  {
-    title: "Networking",
-    icon: Network,
-    items: ["Wireshark", "iPerf3", "Network Analysis"]
-  },
-  {
-    title: "Tools",
-    icon: Layers,
-    items: ["VS Code", "Git", "GitHub", "Google Colab"]
-  }
+  { name: "HTML", slug: "html5" },
+  { name: "CSS", slug: "css" },
+  { name: "JavaScript", slug: "javascript" },
+  { name: "React.js", slug: "react" },
+  { name: "Python", slug: "python" },
+  { name: "PHP", slug: "php" },
+  {name: "C++", slug: "cplusplus" },
+  {name: "C", slug: "c" },
+  { name: "MySQL", slug: "mysql" },
+  { name: "Figma", slug: "figma" },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "Sundanese Script Recognition",
-    category: "Machine Learning",
-    icon: "✦",
-    color: "violet",
-    description:
-      "Pengenalan Aksara Sunda menggunakan CNN dan Transfer Learning VGG-16.",
-    details:
-      "Proyek klasifikasi citra Aksara Sunda menggunakan preprocessing gambar, VGG-16 pretrained ImageNet, baseline training, dan fine-tuning.",
-    tech: ["Python", "TensorFlow", "CNN", "VGG-16"],
-    github: ""
-  },
-  {
-    id: 2,
-    title: "Network Intrusion Detection",
-    category: "Cybersecurity",
-    icon: "⌘",
-    color: "cyan",
-    description:
-      "Analisis Random Forest untuk deteksi intrusi jaringan.",
-    details:
-      "Penelitian mengenai pengaruh penanganan ketidakseimbangan kelas menggunakan Baseline, SMOTE, dan ADASYN pada klasifikasi BENIGN dan ATTACK.",
-    tech: ["Python", "Random Forest", "CIC-IDS2017"],
-    github: ""
-  },
-  {
-    id: 3,
-    title: "Cryptocurrency Price Prediction",
-    category: "Machine Learning",
+   title: "Cryptocurrency Patterned Dataset Mining",
+    category: "Data Mining",
     icon: "◈",
     color: "pink",
     description:
-      "Perbandingan model PatchTST dan iTransformer untuk prediksi harga cryptocurrency.",
+      "A website that stores daily Bitcoin data from Indodax",
     details:
       "Penelitian time-series forecasting untuk Bitcoin, Ethereum, dan Solana.",
-    tech: ["Python", "PatchTST", "iTransformer"],
-    github: ""
+    tech: ["PHP", "MySQL"],
+    github: "https://github.com/balqisclarissa/crypto-indodax"
   },
   {
-    id: 4,
-    title: "Wi-Fi Performance Analysis",
-    category: "Networking",
-    icon: "◎",
-    color: "blue",
+    id: 2,
+    title: "UI/UX Design for An Attendance Application",
+    category: "UI/UX Design",
+    icon: "⌘",
+    color: "cyan",
     description:
-      "Analisis kualitas jaringan Wi-Fi berdasarkan throughput, latency, dan packet loss.",
+      "An attendance app called Attendify, designed using Figma.",
     details:
-      "Pengukuran dan analisis performa jaringan menggunakan iPerf3 dan Wireshark.",
-    tech: ["iPerf3", "Wireshark", "Networking"],
-    github: ""
-  }
+      "Penelitian mengenai pengaruh penanganan ketidakseimbangan kelas menggunakan Baseline, SMOTE, dan ADASYN pada klasifikasi BENIGN dan ATTACK.",
+    tech: ["Figma"],
+    prototype: "https://www.figma.com/proto/MkK1gFjCLyrXzFNf7Yb7VQ/ATTENDIFY?node-id=103-147&starting-point-node-id=103%3A147&t=dQNpjE5geY9VzVoA-1"
+  },
+  {
+    id: 3,
+    title: "Complaint System Website",
+    category: "Web Development",
+    icon: "◈",
+    color: "pink",
+    description:
+      "A website for managing and submitting complaints.",
+    details:
+      "Penelitian time-series forecasting untuk Bitcoin, Ethereum, dan Solana.",
+    tech: ["PHP", "CSS"],
+    github: "https://github.com/balqisclarissa/sistem-pengaduan"
+  },
 ];
 
 export const experiences = [
@@ -116,26 +83,13 @@ export const experiences = [
     title: "Informatics Student",
     place: "Universitas Pembangunan Nasional Veteran Jawa Timur",
     date: "Current",
-    description:
-      "Mempelajari programming, software development, machine learning, database, dan computer networking.",
     icon: GraduationCap
   },
   {
     type: "Organization",
     title: "UKM Penalaran dan Kreativitas",
     place: "Organization Activities",
-    date: "Add your period",
-    description:
-      "Terlibat dalam pengelolaan website, dokumentasi, publikasi, dan kegiatan organisasi.",
+    date: "2024 - 2025",
     icon: BriefcaseBusiness
   },
-  {
-    type: "Experience",
-    title: "Backend Developer Internship",
-    place: "PT PLN (Persero) UPDL Surabaya",
-    date: "Add your period",
-    description:
-      "Pengembangan aplikasi web, pembuatan API, pengelolaan database, dan pengujian aplikasi.",
-    icon: Code2
-  }
 ];

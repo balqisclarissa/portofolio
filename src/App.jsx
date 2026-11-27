@@ -7,12 +7,33 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("portfolio-theme") || "dark";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("portfolio-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
   return (
     <>
+      <button
+        className="theme-toggle"
+        onClick={toggleTheme}
+        aria-label="Toggle theme"
+    >
+      {theme === "dark" ? "☀️" : "🌙"}
+      </button>
       <RadialMenu />
 
       <main id="portfolio-main">
@@ -27,7 +48,6 @@ function App() {
       <footer className="footer">
         <p>
           © {new Date().getFullYear()} Balqis Rahma Clarissa.
-          Built with React.js.
         </p>
 
         <a href="#home">
@@ -36,6 +56,8 @@ function App() {
       </footer>
     </>
   );
+
+  
 }
 
 export default App;
